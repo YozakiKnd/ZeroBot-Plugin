@@ -76,7 +76,12 @@ func init() { // 插件主体
 				ctx.SendChain(dgtr.randRecord("RocketPunch.amr"))
 			}
 		})
-
+	
+	engine.OnKeyword("ke的攻略").SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("ke.png"))
+		})
+	
 	engine.OnFullMatchGroup([]string{"喜欢", "爱你", "爱", "suki", "daisuki", "すき", "好き", "贴贴", "老婆", "亲一个", "mua"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			switch rand.Intn(4) {

@@ -92,7 +92,7 @@ func init() { // 插件主体
 			ctx.SendChain(dgtr.randImage("mls.png"))
 		})
 	
-	engine.OnFullMatchGroup([]string{"深渊魔力石的攻略", "深渊石效果"}).SetBlock(true).
+	engine.OnFullMatchGroup([]string{"深渊魔力石的攻略", "深渊魔力石效果"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(dgtr.randImage("symls.png"))
 		})
@@ -109,7 +109,7 @@ func init() { // 插件主体
 	
 	engine.OnFullMatchGroup([]string{"艾尔全职业简称表", "艾尔全职业"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("zy.png"))
+			ctx.SendChain(dgtr.randImage("zy.jpg"))
 		})
 	
 	engine.OnFullMatchGroup([]string{"武器阶段"}).SetBlock(true).

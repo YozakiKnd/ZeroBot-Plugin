@@ -77,6 +77,42 @@ func init() { // 插件主体
 			}
 		})
 	
+	engine.OnFullMatchGroup([]string{"破防表", "破防的攻略"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("break.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"13c炼制表", "13C炼制表"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("13.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"互助的攻略", "收集册的攻略"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("help.png"))
+		})
+	
+	
+	engine.OnFullMatchGroup([]string{"17c词条", "17的攻略"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("17c.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"17c炼制表", "17C炼制表"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("17.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"经验的攻略", "经验攻略"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("exp.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"掉率的攻略", "掉率攻略"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("doop.png"))
+		})
+	
 	engine.OnFullMatchGroup([]string{"极大表", "极大暴击表"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(dgtr.randImage("max.png"))

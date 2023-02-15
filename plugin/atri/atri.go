@@ -77,6 +77,11 @@ func init() { // 插件主体
 			}
 		})
 	
+	engine.OnFullMatchGroup([]string{"极大表", "极大暴击表"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("max.png"))
+		})
+	
 	engine.OnKeyword("ke的攻略").SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(dgtr.randImage("ke.png"))

@@ -77,9 +77,44 @@ func init() { // 插件主体
 			}
 		})
 	
+	engine.OnKeyword("艾尔帮助").SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(message.Text("艾尔指令大全:\n艾尔全职业,极大表,破防表\n武器阶段,17c词条\n13c炼制表,17c炼制表,神物的攻略\n魔力石效果,深渊魔力石效果,刻印石效果\n互助的攻略,经验的攻略,掉率的攻略\nxx的攻略(更新中...)"))
+		})
+	
 	engine.OnFullMatchGroup([]string{"破防表", "破防的攻略"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(dgtr.randImage("break.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"魔力石的攻略", "魔力石效果"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("mls.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"深渊魔力石的攻略", "深渊石效果"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("symls.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"刻印石的攻略", "刻印石效果"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("kys.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"神物的攻略", "神物石效果"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("sws.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"艾尔全职业简称表", "艾尔全职业"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("zy.png"))
+		})
+	
+	engine.OnFullMatchGroup([]string{"武器阶段"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randImage("wq.png"))
 		})
 	
 	engine.OnFullMatchGroup([]string{"13c炼制表", "13C炼制表"}).SetBlock(true).

@@ -79,7 +79,7 @@ func init() { // 插件主体
 	
 	engine.OnKeyword("艾尔帮助").SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(message.Text("艾尔指令大全:\n艾尔全职业,极大表,破防表\n武器阶段,17c词条\n13c炼制表,17c炼制表,神物的攻略\n魔力石效果,深渊魔力石效果,刻印石效果\n互助的攻略,经验的攻略,掉率的攻略\nxx的攻略(更新中...)"))
+			ctx.SendChain(message.Text("艾尔指令大全:\n艾尔全职业,极大表,破防表\n武器阶段,17c词条\n13c炼制表,17c炼制表,神物的攻略\n魔力石效果,深渊魔力石效果,刻印石效果\n互助的攻略,经验的攻略,掉率的攻略\nxx的攻略(更新中...),攻略内容收集于VCbot"))
 		})
 	
 	engine.OnFullMatchGroup([]string{"破防表", "破防的攻略"}).SetBlock(true).
